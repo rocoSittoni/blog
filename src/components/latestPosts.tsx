@@ -1,6 +1,9 @@
 import React from "react"
+import { Link } from 'gatsby';
 
-const LatestPosts = () => {
+const LatestPosts = (sanityData: any) => {
+
+    console.log(sanityData.sanityData)
 
     return (
         <div className="Latest__Posts">
@@ -10,14 +13,16 @@ const LatestPosts = () => {
             </div>
             <div className="Latest__Posts--Content">
                 {
-                    [0, 1, 2, 3, 4, 5].map(i => {
+                    sanityData.sanityData.map((post: any) => {
                         return (
-                            <div className="Latest__Posts--Post">
-                                <div className="Latest__Posts--Post-Row">
-                                    <h4 className="Latest__Posts--Post-Title">This is a random blog post.</h4>
-                                    <h5 className="Latest__Posts--Post-Date">August 11, 2023</h5>
+                            <Link to={post.node.slug}>
+                                <div className="Latest__Posts--Post">
+                                    <div className="Latest__Posts--Post-Row">
+                                        <h4 className="Latest__Posts--Post-Title">{post.node.title}</h4>
+                                        <h5 className="Latest__Posts--Post-Date">{post.node.launchDate}</h5>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         )
                     })
                 }
