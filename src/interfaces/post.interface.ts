@@ -8,4 +8,5 @@ export interface Post {
     launchDate: Date
     comments: boolean
     slug: string
+    popular: boolean
 }

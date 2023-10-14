@@ -8,8 +8,8 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({isDark, onUpdateTheme}) => {
 
-  const savedTheme: string | null = window.localStorage.getItem('theme')
-  console.log(savedTheme);
+  // const savedTheme: string | null = window.localStorage.getItem('theme')
+  // console.log(savedTheme);
 
   return (
     <nav className='Navigation'>

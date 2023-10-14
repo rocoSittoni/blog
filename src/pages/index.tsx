@@ -16,7 +16,7 @@ interface HomeProps extends PageProps {
   data: {
     allSanityPost: {
       edges: {
-        nodes: any;
+        node: any;
       }
     };
   };
@@ -53,27 +53,21 @@ const Home: React.FC<HomeProps> = ({ data }) => {
 
 export const query = graphql`
 query {
-    allSanityPost {
-      edges {
-        node {
-          title
-          description
-          image {
-            asset {
-              url
-            }
-          }
-          content
-          tags
-          categories
-          launchDate
-          comments
-          slug {
-            current
-          }
+  allSanityPost(
+    sort: { fields: launchDate, order: DESC }
+    limit: 12
+  ) {
+    edges {
+      node { 
+        title
+        categories
+        launchDate,
+        slug {
+          current
         }
       }
     }
+  }
 }
 `;
 
