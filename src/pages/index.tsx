@@ -32,7 +32,8 @@ const Home: React.FC<HomeProps> = ({ data }) => {
         <div className="Home__Header">
           <div className="Home__Left">
             <h1 className="Home__Title">Hi, I'm Roco!</h1>
-            <p className="Home__Subtitle">Welcome to my digital space. &#x1F680;</p>
+            {/* &#x1F680; */}
+            <p className="Home__Subtitle">Welcome to my digital space.</p>
             <p className="Home__Description">
               I'm Roco, an enthusiastic full-stack developer focused on working with challenging projects while having fun.
               This is a place where i share the stuff that i create and write.
@@ -53,10 +54,7 @@ const Home: React.FC<HomeProps> = ({ data }) => {
 
 export const query = graphql`
 query {
-  allSanityPost(
-    sort: { fields: launchDate, order: DESC }
-    limit: 12
-  ) {
+  allSanityPost(sort: {launchDate: DESC}, limit: 6) {
     edges {
       node { 
         title

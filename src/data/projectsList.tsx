@@ -2,12 +2,6 @@ import { Project } from "../interfaces/project.interface"
 
 export const projectsList: Project[] = [
     {
-      name: 'taniarascia.com',
-      date: '2022',
-      slug: 'taniarascia.com',
-      tagline: 'The source of this website.',
-    },
-    {
       name: 'Keyboard Accordion',
       date: '2022',
       slug: 'accordion',

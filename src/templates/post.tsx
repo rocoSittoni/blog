@@ -1,30 +1,36 @@
 import { graphql, PageProps } from 'gatsby'
 import React from 'react'
+import ReactMarkdown from 'react-markdown';
+import Layout from '../components/layout';
 
 interface PostProps extends PageProps {
-
+  data: {
+    allSanityPost: {
+      nodes: any
+    };
+  };
 }
 
 const Post: React.FC<PostProps> = ({ data }) => {
-  
-  // const post = data.markdownRemark;
-  console.log(data)
-
+  const post = data.allSanityPost.nodes[0];
   return (
-    <div>
-      {/* <h1>{post.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} /> */}
-    </div>
+    <Layout>
+      <div className="Post"></div>
+      <h1 className='Post__Title'>{post.title}</h1>
+      <div className="content">
+        <ReactMarkdown>{post.content}</ReactMarkdown>
+      </div>
+    </Layout>
   )
 }
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      frontmatter {
+    allSanityPost(filter: { slug: { current: { eq: $slug } } }) {
+      nodes {
         title
+        content
       }
-      html
     }
   }
 `;

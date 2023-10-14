@@ -154,6 +154,9 @@ body.light {
 }
 
 .Latest__Posts {
+    &--Link {
+        text-decoration: none;
+    }
     margin: 6rem 0 0 0;
     &--Header {
         display: flex;
@@ -168,6 +171,7 @@ body.light {
     &--Post {
         &-Title {
             margin: 0.8rem 0 0 0;
+            color: var(--color-text)
         }
         &-Row {
             display: flex;
@@ -176,7 +180,7 @@ body.light {
         }
         &-Date {
             margin: 0;
-            color: yellow;
+            color: var(--color-text-light);
         }
     }
 }
@@ -190,7 +194,8 @@ body.light {
     }
     &__Post {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
         width: 300px;
         height: 100px;
@@ -198,6 +203,17 @@ body.light {
         background-color: #00220649;
         border-radius: 5px;
         border: 1px solid rgba(0, 1, 85, 0.856);
+        padding: 1rem;
+        &--Title {
+            width: 100%;
+            margin: 0;
+        }
+        &--Footer {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin: 0;
+        }
     }
 }
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { projectsList } from '../data/projectsList'
 
 const Projects = () => {
     return (
@@ -6,10 +7,11 @@ const Projects = () => {
             <h1 className="Home__Projects--Title">Projects</h1>
             <div className="Home__Projects--Content">
                 {
-                    [1,2,3,4,5,6].map(i => {
+                    projectsList.map(project => {
                         return (
                             <div className="Home__Projects--Card">
-                                Hello there
+                                {project.name}
+                                {project.highlight}
                             </div>
                         )
                     })

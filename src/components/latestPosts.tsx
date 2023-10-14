@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 const LatestPosts = (sanityData: any) => {
 
-    const posts = sanityData.sanityData.slice(0, 6);
+    const posts = sanityData.sanityData;
 
     return (
         <div className="Latest__Posts">
@@ -18,7 +18,7 @@ const LatestPosts = (sanityData: any) => {
 
                     posts.map((post: any) => {
                         return (
-                            <Link to={post.node.slug.current}>
+                            <Link className="Latest__Posts--Link" to={post.node.slug.current}>
                                 <div className="Latest__Posts--Post">
                                     <div className="Latest__Posts--Post-Row">
                                         <h4 className="Latest__Posts--Post-Title">{post.node.title}</h4>
