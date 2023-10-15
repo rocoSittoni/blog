@@ -19,10 +19,11 @@ body {
     color: var(--color-text);
     background-color: var(--color-background);
     font-family: "Open Sans";
+    margin: 0 8px;
 }
 
 body.dark {
-    --color-background: #171717;
+    --color-background: #000213;
     --color-primary: #CD104D;
     --color-text: #ffffff;
     --color-text-light: #b1b1b1;
@@ -42,7 +43,7 @@ body.light {
 }
 
 .Layout {
-    margin: 2rem auto;
+    margin: 0 auto;
     max-width: 1100px;
     padding: 0 1rem;
 }
@@ -53,6 +54,7 @@ body.light {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 4rem;
+    padding-top: 2rem;
     &__Wrapper {
         width: 90%;
     }
@@ -200,9 +202,9 @@ body.light {
         width: 300px;
         height: 100px;
         flex-grow: 2;
-        background-color: #00220649;
+        background:linear-gradient(135deg, #f2d50f 0%,#da0641 100%);
         border-radius: 5px;
-        border: 1px solid rgba(0, 1, 85, 0.856);
+        // border: 1px solid rgba(0, 1, 85, 0.856);
         padding: 1rem;
         &--Title {
             width: 100%;
@@ -226,14 +228,15 @@ body.light {
     }
     &--Card {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 1rem;
         width: 300px;
         height: 200px;
         flex-grow: 2;
-        background-color: #28008c;
+        background:linear-gradient(135deg, #184e68 0%,#57ca85 100%);
         border-radius: 5px;
-        border: 1px solid yellow;
     }
 }
 
@@ -243,6 +246,13 @@ body.light {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-direction: column;
+    &__Icons {
+        display: flex;
+        flex-direction: row;
+        width: 22%;
+        justify-content: space-evenly;
+    }
 }
 
 @media screen and (min-width: 700px) {

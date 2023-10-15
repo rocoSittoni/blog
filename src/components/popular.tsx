@@ -4,7 +4,7 @@ import { Post } from '../interfaces/post.interface'
 
 const Popular = (sanityData: any) => {
 
-    console.log(sanityData.sanityData)
+    // console.log(sanityData.sanityData)
     const posts = sanityData.sanityData;
 
     return (
@@ -14,15 +14,15 @@ const Popular = (sanityData: any) => {
                 {
                     posts.map((post: any) => {
                         return (
-                            <Link to={post.node.slug.current}>
-                                <div className="Popular__Post">
+                            <div className="Popular__Post">
+                                <Link to={post.node.slug.current}>
                                     <h3 className="Popular__Post--Title">{post.node.title}</h3>
-                                    <div className="Popular__Post--Footer">
-                                        <div>{post.node.launchDate}</div>
-                                        <div>{post.node.categories[0]}</div>
-                                    </div>
+                                </Link>
+                                <div className="Popular__Post--Footer">
+                                    <div>{post.node.launchDate}</div>
+                                    <div>{post.node.categories[0]}</div>
                                 </div>
-                            </Link>
+                            </div>
                         )
                     })
                 }

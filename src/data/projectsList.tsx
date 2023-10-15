@@ -52,37 +52,4 @@ export const projectsList: Project[] = [
       tagline: 'An MVC framework from scratch in PHP.',
       url: 'https://laconia.dev',
     },
-    {
-      name: 'Primitive',
-      date: '2017',
-      slug: 'primitive',
-      tagline: 'A front-end design toolkit for responsive web apps.',
-      url: 'https://taniarascia.github.io/primitive',
-    },
-    {
-      name: 'Snek',
-      date: '2019',
-      slug: 'snek',
-      tagline: 'A terminal-based Snake implementation.',
-      writeup: '/snake-game-in-javascript',
-      highlight: true,
-    },
-    {
-      date: '2020',
-      name: 'webpack Boilerplate',
-      slug: 'webpack-boilerplate',
-      tagline: 'A sensible webpack 5 boilerplate.',
-    },
-    {
-      name: 'Chat App',
-      date: '2021',
-      slug: 'chat',
-      tagline: 'React/Redux, TypeScript, Socket.io chat app.',
-    },
-    {
-      name: 'React Advanced Form',
-      date: '2022',
-      slug: 'react-advanced-form',
-      tagline: 'An example of a schema-based form system for React.',
-    },
   ]

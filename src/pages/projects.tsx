@@ -1,13 +1,16 @@
 import { HeadFC } from "gatsby"
 import React, { lazy } from "react"
 const Layout = lazy(() => import("../components/layout"))
+import ProjectsList from "../components/projects"
 
 const Projects = () => {
 
     return (
         <Layout>
-            <div className="Projects"></div>
-            <h1 className="Projects__Title">Projects</h1>
+            <div className="Projects">
+                <h1 className="Projects__Title">Projects</h1>
+                <ProjectsList />
+            </div>
         </Layout>
     )
 }
