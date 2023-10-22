@@ -9,8 +9,8 @@ import Popular from "../components/popular";
 import Projects from "../components/projects";
 
 const Layout = lazy(() => import("../components/layout"))
-
 import { StaticImage } from "gatsby-plugin-image"
+import rick from '../gifs/rick.gif'
 
 interface HomeProps extends PageProps {
   data: {
@@ -33,20 +33,20 @@ const Home: React.FC<HomeProps> = ({ data }) => {
           <div className="Home__Left">
             <h1 className="Home__Title">Hi, I'm Roco!</h1>
             {/* &#x1F680; */}
-            <p className="Home__Subtitle">Welcome to my digital space.</p>
+            <p className="Home__Subtitle">Welcome to my lab. 🧪</p>
             <p className="Home__Description">
               I'm Roco, an enthusiastic full-stack developer focused on working with challenging projects while having fun.
-              This is a place where i share the stuff that i create and write.
+              This is the place where i share the stuff that i create and write.
             </p>
           </div>
           <div className="Home__Right">
-            <StaticImage src="../images/rick.gif" alt="Rick-Sanchez" />
-            {/* <img src="../images/rick.gif" alt="Rick-Sanchez" /> */}
+            {/* <StaticImage src="../images/rick.gif" alt="Rick-Sanchez" /> */}
+            <img src={rick} alt="Rick Sanchez" style={{width: '100%'}} />
           </div>
         </div>
         <LatestPosts sanityData={sanityData} />
         <Popular sanityData={sanityData} />
-        <Projects />
+        <Projects viewAll='true'/>
       </main>
     </Layout>
   )

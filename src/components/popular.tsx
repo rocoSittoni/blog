@@ -1,6 +1,7 @@
 import { graphql, Link } from 'gatsby';
 import React from 'react'
 import { Post } from '../interfaces/post.interface'
+import ViewAllButton from './ViewAllButton';
 
 const Popular = (sanityData: any) => {
 

@@ -1,9 +1,17 @@
 import React from 'react'
 import { projectsList } from '../data/projectsList'
 
-const ProjectsList = () => {
+const ProjectsList = (viewAll: any) => {
     return (
         <div className="Home__Projects">
+            {
+                viewAll
+                ?
+                <div className='Home__Projects--Header'>
+                    <h1 className="Home__Projects--Title">Projects</h1>
+                </div>
+                : ''
+            }
             <div className="Home__Projects--Content">
                 {
                     projectsList.map(project => {

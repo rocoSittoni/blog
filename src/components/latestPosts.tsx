@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from 'gatsby';
+import ViewAllButton from "./ViewAllButton";
 
 const LatestPosts = (sanityData: any) => {
 
@@ -10,7 +11,7 @@ const LatestPosts = (sanityData: any) => {
             <div className="Latest__Posts--Header">
                 <h1 className="Latest__Posts--Title">Latest Posts</h1>
                 <Link to="/blog">
-                    <button>View all</button>
+                    <ViewAllButton />
                 </Link>
             </div>
             <div className="Latest__Posts--Content">

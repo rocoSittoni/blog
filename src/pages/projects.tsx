@@ -9,7 +9,7 @@ const Projects = () => {
         <Layout>
             <div className="Projects">
                 <h1 className="Projects__Title">Projects</h1>
-                <ProjectsList />
+                <ProjectsList viewAll='false'/>
             </div>
         </Layout>
     )

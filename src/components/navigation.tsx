@@ -38,7 +38,7 @@ const Navigation: React.FC<NavigationProps> = ({isDark, onUpdateTheme}) => {
             </a>
         </ul>
       </div>
-      {<button onClick={() => onUpdateTheme(!isDark)} className='Navigation__Toggle'/>}
+      {<button onClick={() => onUpdateTheme(!isDark)} className='Navigation__Toggle'>💡</button>}
     </nav>
   );
 };
