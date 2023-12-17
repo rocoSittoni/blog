@@ -10,7 +10,7 @@
   --color-background: #e6e6e6;
   --dark-mode: #000;
   --dark-mode-hf: #CD104D;
-
+  --gradient: linear-gradient(114.3deg, rgb(41, 121, 95), rgb(41, 89, 121), rgb(41, 89, 121));
   /* Font family */
   --font-family-base: "Open Sans"
 }
@@ -20,10 +20,12 @@ body {
     background-color: var(--color-background);
     font-family: "Open Sans";
     margin: 0 8px;
+    transition: background-color 0.3s ease;
 }
 
 body.dark {
     --color-background: #000213;
+    // --color-background: rgb(0 17 25);
     --color-primary: #CD104D;
     --color-text: #ffffff;
     --color-text-light: #b1b1b1;
@@ -92,10 +94,15 @@ body.light {
         justify-content: center;
         align-items: center;
         transform: scale(1.4);
-        background-color: rgba(71, 63, 79, 0.5);
+        background-color: var(--color-background);
+        color: var(--color-text);
         border: none;
+        transition: background-color 0.3s ease;
         border-radius: 3px;
         cursor: pointer;
+        &:hover {
+            border: solid grey 1px;
+        }
     }
 }
 
@@ -156,6 +163,20 @@ body.light {
     }
 }
 
+.ViewAllButton {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    padding: 6px 8px;
+    font-size: 16px;
+    border: solid 1px grey;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+        border: solid var(--color-heading) 1px;
+    }
+}
+
 .Projects {
     &__Title {
         font-size: 2.8rem;
@@ -204,26 +225,44 @@ body.light {
     &__Post {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: space-around;
+        align-items: self-start;
         width: 300px;
         height: 100px;
         flex-grow: 2;
-        background:linear-gradient(135deg, #f2d50f 0%,#da0641 100%);
         border-radius: 5px;
-        // border: 1px solid rgba(0, 1, 85, 0.856);
         padding: 1rem;
+
+        color: #333;
+        background: #ddd;
+        background-size: 140%;
+        background-image: var(--gradient);
+        animation: bg-animation 15s infinite;
+
+        // background:linear-gradient(135deg, #f2d50f 0%,#da0641 100%);
+        // border: 1px solid rgba(0, 1, 85, 0.856);
         &--Title {
             width: 100%;
             margin: 0;
+            color: var(--color-text);
+        }
+        &--Link {
+            text-decoration: none;
         }
         &--Footer {
             display: flex;
             width: 100%;
             justify-content: space-between;
             margin: 0;
+            color: var(--color-text);
         }
     }
+}
+
+@keyframes bg-animation {
+    0% {background-position: left}
+    50% {background-position: right}
+    100% {background-position: left}
 }
 
 .Home__Projects {
@@ -235,22 +274,45 @@ body.light {
     }
     &--Card {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: flex-start;
         flex-direction: column;
         padding: 1rem;
         width: 300px;
         height: 200px;
         flex-grow: 2;
-        background:linear-gradient(135deg, #184e68 0%,#57ca85 100%);
+        background: #ddd;
+        background-size: 140%;
+        background-image: var(--gradient);
+        animation: bg-animation 15s infinite;
         border-radius: 5px;
     }
     &--Header {
-
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     &--Title {
         // position: relative;
         // top: 4.6rem;
+    }
+    &--Card-Actions {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+    &--Button {
+        color: var(--color-text);
+        padding: 3px 4px;
+        font-size: 16px;
+        border: solid 1px transparent;
+        margin-right: 8px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        &:hover {
+            border: solid var(--color-heading) 1px;
+        }
     }
 }
 

@@ -1,15 +1,24 @@
 import React from 'react'
 import { projectsList } from '../data/projectsList'
+import { Link, PageProps } from 'gatsby'
+import ViewAllButton from './ViewAllButton'
+import ProjectCardButton from './ProjectCardButton';
 
-const ProjectsList = (viewAll: any) => {
+interface HomeProps {
+    viewAll: boolean;
+}
+
+const ProjectsList: React.FC<HomeProps> = ({viewAll}) => {
     return (
         <div className="Home__Projects">
             {
                 viewAll
-                ?
-                <div className='Home__Projects--Header'>
-                    <h1 className="Home__Projects--Title">Projects</h1>
-                </div>
+                ? <div className='Home__Projects--Header'>
+                        <h1 className="Home__Projects--Title">Projects</h1>
+                        <Link to="/projects">
+                            <ViewAllButton />
+                        </Link>
+                  </div>
                 : ''
             }
             <div className="Home__Projects--Content">
@@ -27,9 +36,9 @@ const ProjectsList = (viewAll: any) => {
                                     {project.tagline}
                                 </div>
                                 <div className='Home__Projects--Card-Actions'>
-                                    <button>somtn</button>
-                                    <button>somtn</button>
-                                    <button>somtn</button>
+                                    <ProjectCardButton text='Article'/>
+                                    <ProjectCardButton text='Demo'/>
+                                    <ProjectCardButton text='Source'/>
                                 </div>
                             </div>
                         )

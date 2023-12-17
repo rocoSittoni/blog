@@ -6,11 +6,11 @@ import '../styles/index.scss';
 import LatestPosts from "../components/latestPosts";
 import { Post } from "../interfaces/post.interface";
 import Popular from "../components/popular";
-import Projects from "../components/projects";
 
 const Layout = lazy(() => import("../components/layout"))
 import { StaticImage } from "gatsby-plugin-image"
 import rick from '../gifs/rick.gif'
+import ProjectsList from "../components/ProjectsList";
 
 interface HomeProps extends PageProps {
   data: {
@@ -33,9 +33,9 @@ const Home: React.FC<HomeProps> = ({ data }) => {
           <div className="Home__Left">
             <h1 className="Home__Title">Hi, I'm Roco!</h1>
             {/* &#x1F680; */}
-            <p className="Home__Subtitle">Welcome to my lab. 🧪</p>
+            {/* <p className="Home__Subtitle">Welcome to my lab. 🧪</p> */}
             <p className="Home__Description">
-              I'm Roco, an enthusiastic full-stack developer focused on working with challenging projects while having fun.
+              I'm a software developer focused on working with challenging projects while having fun.
               This is the place where i share the stuff that i create and write.
             </p>
           </div>
@@ -46,7 +46,7 @@ const Home: React.FC<HomeProps> = ({ data }) => {
         </div>
         <LatestPosts sanityData={sanityData} />
         <Popular sanityData={sanityData} />
-        <Projects viewAll='true'/>
+        <ProjectsList viewAll={true}/>
       </main>
     </Layout>
   )

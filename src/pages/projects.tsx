@@ -1,7 +1,7 @@
 import { HeadFC } from "gatsby"
 import React, { lazy } from "react"
 const Layout = lazy(() => import("../components/layout"))
-import ProjectsList from "../components/projects"
+import ProjectsList from "../components/ProjectsList"
 
 const Projects = () => {
 
@@ -9,7 +9,7 @@ const Projects = () => {
         <Layout>
             <div className="Projects">
                 <h1 className="Projects__Title">Projects</h1>
-                <ProjectsList viewAll='false'/>
+                <ProjectsList viewAll={false}/>
             </div>
         </Layout>
     )

@@ -2,7 +2,7 @@ import React from 'react'
 
 const ViewAllButton = () => {
   return (
-    <button>
+    <button className='ViewAllButton'>
         View all
     </button>
   )
