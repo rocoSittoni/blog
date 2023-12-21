@@ -10,9 +10,8 @@
   --color-background: #e6e6e6;
   --dark-mode: #000;
   --dark-mode-hf: #CD104D;
-  --gradient: linear-gradient(114.3deg, rgb(41, 121, 95), rgb(41, 89, 121), rgb(41, 89, 121));
   /* Font family */
-  --font-family-base: "Open Sans"
+  --font-family-base: "Open Sans" 
 }
 
 body {
@@ -207,6 +206,9 @@ body.light {
             display: flex;
             align-items: baseline;
             justify-content: space-between;
+            padding-bottom: 2px;
+            padding-top: 3px;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.616);
         }
         &-Date {
             margin: 0;
@@ -233,14 +235,10 @@ body.light {
         border-radius: 5px;
         padding: 1rem;
 
-        color: #333;
-        background: #ddd;
-        background-size: 140%;
-        background-image: var(--gradient);
-        animation: bg-animation 15s infinite;
-
-        // background:linear-gradient(135deg, #f2d50f 0%,#da0641 100%);
-        // border: 1px solid rgba(0, 1, 85, 0.856);
+        // color: #333;
+        // background: none;
+        // background: #9ed4e9;
+        border: 1px solid var(--color-heading);
         &--Title {
             width: 100%;
             margin: 0;
@@ -259,12 +257,6 @@ body.light {
     }
 }
 
-@keyframes bg-animation {
-    0% {background-position: left}
-    50% {background-position: right}
-    100% {background-position: left}
-}
-
 .Home__Projects {
     margin: 6rem 0;
     &--Content {
@@ -281,10 +273,7 @@ body.light {
         width: 300px;
         height: 200px;
         flex-grow: 2;
-        background: #ddd;
-        background-size: 140%;
-        background-image: var(--gradient);
-        animation: bg-animation 15s infinite;
+        border: 1px solid var(--color-heading);
         border-radius: 5px;
     }
     &--Header {
