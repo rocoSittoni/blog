@@ -26,11 +26,11 @@ const ProjectsList: React.FC<HomeProps> = ({viewAll}) => {
                     projectsList.map(project => {
                         return (
                             <div className="Home__Projects--Card">
-                                <div className='Home__Projects--Card--Title'>
                                 <div className='Home__Projects--Card--Year'>
                                     {project.date}
                                 </div>
-                                {project.name}
+                                <div className='Home__Projects--Card--Title'>
+                                    {project.name}
                                 </div>
                                 <div className='Home__Projects--Card-Description'>
                                     {project.tagline}

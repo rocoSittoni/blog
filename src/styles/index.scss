@@ -26,7 +26,7 @@ body.dark {
     --color-background: #000213;
     // --color-background: rgb(0 17 25);
     --color-primary: #CD104D;
-    --color-text: #ffffff;
+    --color-text: #ffffffdc;
     --color-text-light: #b1b1b1;
     --color-heading: #DFDFDE;
     --color-heading-black: #EDEDED;
@@ -195,24 +195,25 @@ body.light {
         margin: 0;
     }
     &--Content {
-        margin-top: 2rem;
+        margin: 2rem 0 2rem 0;
     }
     &--Post {
         &-Title {
-            margin: 0.8rem 0 0 0;
-            color: var(--color-text)
+            margin: 1rem 0 0 0;
+            color: var(--color-text);
+            font-size: 1em;
         }
         &-Row {
             display: flex;
             align-items: baseline;
             justify-content: space-between;
-            padding-bottom: 2px;
-            padding-top: 3px;
-            border-bottom: 1px solid rgba(128, 128, 128, 0.616);
+            padding-bottom: 3px;
+            padding-top: 4px;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.28);
         }
         &-Date {
             margin: 0;
-            color: var(--color-text-light);
+            color: var(--color-text);
         }
     }
 }
@@ -238,7 +239,7 @@ body.light {
         // color: #333;
         // background: none;
         // background: #9ed4e9;
-        border: 1px solid var(--color-heading);
+        border: 1px solid var(--color-text);
         &--Title {
             width: 100%;
             margin: 0;
@@ -273,8 +274,12 @@ body.light {
         width: 300px;
         height: 200px;
         flex-grow: 2;
-        border: 1px solid var(--color-heading);
+        border: 1px solid var(--color-text);
         border-radius: 5px;
+        &--Title {
+            font-weight: bold;
+            color: var(--color-text);
+        }
     }
     &--Header {
         display: flex;
@@ -282,8 +287,7 @@ body.light {
         align-items: center;
     }
     &--Title {
-        // position: relative;
-        // top: 4.6rem;
+        
     }
     &--Card-Actions {
         width: 100%;
@@ -305,20 +309,13 @@ body.light {
     }
 }
 
-.Footer {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    &__Icons {
-        display: flex;
-        flex-direction: row;
-        width: 22%;
-        justify-content: space-evenly;
-    }
-}
+// .Footer {
+//     width: 100%;
+//     height: 60px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
 
 @media screen and (min-width: 700px) {
     .Navigation__Home {

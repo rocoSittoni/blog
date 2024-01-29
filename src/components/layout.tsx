@@ -33,7 +33,7 @@ const Layout: React.FC<Props> = ({ children }) => {
     <div className="Layout">
       <Navigation onUpdateTheme={(value: boolean) => {onUpdateTheme(value)}} isDark={isDark} />
       {children}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

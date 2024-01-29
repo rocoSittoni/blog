@@ -32,8 +32,6 @@ const Home: React.FC<HomeProps> = ({ data }) => {
         <div className="Home__Header">
           <div className="Home__Left">
             <h1 className="Home__Title">Hi, I'm Roco!</h1>
-            {/* &#x1F680; */}
-            {/* <p className="Home__Subtitle">Welcome to my lab. 🧪</p> */}
             <p className="Home__Description">
               I'm a software developer focused on working with challenging projects while having fun.
               This is the place where i share the stuff that i create and write.
