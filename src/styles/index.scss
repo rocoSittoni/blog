@@ -235,7 +235,7 @@ body.light {
         flex-grow: 2;
         border-radius: 5px;
         padding: 1rem;
-
+        text-decoration: none;
         // color: #333;
         // background: none;
         // background: #9ed4e9;
@@ -244,9 +244,6 @@ body.light {
             width: 100%;
             margin: 0;
             color: var(--color-text);
-        }
-        &--Link {
-            text-decoration: none;
         }
         &--Footer {
             display: flex;

@@ -1,4 +1,4 @@
-import { graphql, HeadFC } from "gatsby"
+import { graphql, HeadFC, Link } from "gatsby"
 import React, { lazy, useMemo } from "react"
 import { Post } from "../interfaces/post.interface";
 const Layout = lazy(() => import("../components/layout"))
@@ -15,7 +15,6 @@ const Blog = (sanityData: any) => {
         return collection
     }, [sanityData])
     const years = useMemo(() => Object.keys(postsByYear).reverse(), [postsByYear])
-    console.log(postsByYear);
 
     return (
         <Layout>
@@ -34,12 +33,14 @@ const Blog = (sanityData: any) => {
                                         const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
                                         const formattedDate = `${monthNames[newDate.getMonth()]} ${newDate.getDate()}`;
                                         return (
-                                            <div className="Latest__Posts--Post">
-                                                <div className="Latest__Posts--Post-Row">
-                                                    <h4 className="Latest__Posts--Post-Title">{node.title}</h4>
-                                                    <h5 className="Latest__Posts--Post-Date">{formattedDate}</h5>
+                                            <Link className="Latest__Posts--Link" to={node.slug.current}>
+                                                <div className="Latest__Posts--Post">
+                                                    <div className="Latest__Posts--Post-Row">
+                                                        <h4 className="Latest__Posts--Post-Title">{node.title}</h4>
+                                                        <h5 className="Latest__Posts--Post-Date">{formattedDate}</h5>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </Link>
                                         )
                                     })
                                 }
