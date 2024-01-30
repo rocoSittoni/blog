@@ -21,7 +21,6 @@ const Popular = (sanityData: any) => {
                                 </Link>
                                 <div className="Popular__Post--Footer">
                                     <div>{post.node.launchDate}</div>
-                                    <div>{post.node.categories[0]}</div>
                                 </div>
                             </div>
                         )
@@ -39,7 +38,6 @@ query {
       nodes {
         title
         launchDate
-        categories
         content
       }
     }
