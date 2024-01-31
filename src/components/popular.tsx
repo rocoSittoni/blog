@@ -15,7 +15,7 @@ const Popular = (sanityData: any) => {
                 {
                     posts.map((post: any) => {
                         return (
-                            <Link to={post.node.slug.current} className='Popular__Post'>
+                            <Link to={'/blog/' + post.node.slug.current} className='Popular__Post'>
                                 <h3 className="Popular__Post--Title">{post.node.title}</h3>
                                 <div className="Popular__Post--Footer">
                                     <div>{post.node.launchDate}</div>

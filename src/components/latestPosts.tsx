@@ -19,7 +19,7 @@ const LatestPosts = (sanityData: any) => {
 
                     posts.map((post: any) => {
                         return (
-                            <Link className="Latest__Posts--Link" to={post.node.slug.current}>
+                            <Link className="Latest__Posts--Link" to={'/blog/' + post.node.slug.current}>
                                 <div className="Latest__Posts--Post">
                                     <div className="Latest__Posts--Post-Row">
                                         <h4 className="Latest__Posts--Post-Title">{post.node.title}</h4>

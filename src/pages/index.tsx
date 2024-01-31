@@ -4,11 +4,9 @@ import { graphql } from "gatsby";
 
 import '../styles/index.scss';
 import LatestPosts from "../components/latestPosts";
-import { Post } from "../interfaces/post.interface";
 import Popular from "../components/popular";
 
 const Layout = lazy(() => import("../components/layout"))
-import { StaticImage } from "gatsby-plugin-image"
 import rick from '../gifs/rick.gif'
 import ProjectsList from "../components/ProjectsList";
 

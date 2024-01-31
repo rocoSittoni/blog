@@ -23,7 +23,7 @@ export async function createPages({ graphql, actions }) {
 
   result.data.allSanityPost.nodes.forEach(node => {
     createPage({
-      path: `/${node.slug.current}`,
+      path: `/blog/${node.slug.current}`,
       component: resolve('./src/templates/post.tsx'),
       context: {
         slug: node.slug.current,

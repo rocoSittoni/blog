@@ -23,8 +23,8 @@ body {
 }
 
 body.dark {
-    --color-background: #000213;
-    // --color-background: rgb(0 17 25);
+    // --color-background: #000213;
+    --color-background: rgb(0 17 25);
     --color-primary: #CD104D;
     --color-text: #ffffffdc;
     --color-text-light: #b1b1b1;
@@ -306,17 +306,35 @@ body.light {
     }
 }
 
-// .Footer {
-//     width: 100%;
-//     height: 60px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
+::-webkit-scrollbar {
+    width: 7px;
+}
+  
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-text);
+  border-radius: 100vh; /* Set the color of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-background);/* Set the color of the scrollbar track */
+}
 
 @media screen and (min-width: 700px) {
     .Navigation__Home {
         display: none;
+    }
+}
+
+
+@media only screen and (min-width: 765px) and (max-width: 1025px) {
+    .Home__Projects {
+        margin-bottom: 32rem;
+    }
+}
+
+@media only screen and (min-width: 765px) and (max-width: 826px) {
+    .Home__Projects {
+        margin-bottom: 20rem;
     }
 }
 
