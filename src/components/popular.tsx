@@ -1,13 +1,8 @@
 import { graphql, Link } from 'gatsby';
 import React from 'react'
-import { Post } from '../interfaces/post.interface'
-import ViewAllButton from './ViewAllButton';
 
 const Popular = (sanityData: any) => {
-
-    // console.log(sanityData.sanityData)
     const posts = sanityData.sanityData;
-
     return (
         <div className="Popular">
             <h1 className="Popular__Title">Popular</h1>
@@ -29,7 +24,6 @@ const Popular = (sanityData: any) => {
     )
 }
 
-// allSanityPost(filter: { popular: { eq: true } }) {
 export const query = graphql`
 query {
     allSanityPost {
