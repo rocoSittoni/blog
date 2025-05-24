@@ -53,7 +53,7 @@ const config: GatsbyConfig = {
       options: {
         projectId: process.env.PROJECT_ID || 'lzfevnn3',
         dataset: process.env.DATASET || 'production',
-        token: process.env.SANITY_TOKEN || 'skMP5gdXjOkqaq7j3nbWodOwGhsxdbFw4TIckunetS5ZTcR2w4PX1rQpdpeCrE4PHJhc3v0PywmqFEQ3l',
+        token: process.env.SANITY_TOKEN || '',
         graphqlTag: 'default',
       },
     },
